@@ -6,9 +6,9 @@
     <ion-title>{{ film?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
- 
+<div>Crawl from film_details.page.html:{{crawl}}</div>
 <ion-content padding="">
- 
+  <div>Crawl:{{crawl}}</div>
   <ion-card *ngIf="film" class="movie-card">
     <ion-card-header>Episode {{ film.episode_id }}: {{ film.title }}</ion-card-header>
     <ion-card-content>

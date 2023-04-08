@@ -6,11 +6,12 @@
     <ion-back-button></ion-back-button>
   </ion-buttons>
 </ion-header>
+<div><br/>Crawl from films.page.html:<br/>{{crawl}}</div>
 
 <ion-content>
   <ion-list>
     <ion-item button detail lines="inset" *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">
-      {{film.title}}
+      <br/><br/>{{film.title}}<br/><br/>{{film.opening_crawl}}
     </ion-item>
   </ion-list>
 </ion-content>

@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class FilmDetailsPage implements OnInit {
 
   film:any;
+  crawl:any;
 
   constructor(private activatedRoute:ActivatedRoute, private http:HttpClient) { }
 
@@ -17,6 +18,10 @@ export class FilmDetailsPage implements OnInit {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
     this.http.get('https://swapi.dev/api/films/${id}').subscribe(res => {
       this.film = res;
+      this.crawl = res;
+      console.log("res",this.film);
+      console.log("id",id);
+      //this.crawl = res.results[2].opening_crawl;
     })
   }
 
