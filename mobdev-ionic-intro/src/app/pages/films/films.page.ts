@@ -34,6 +34,20 @@ export class FilmsPage implements OnInit {
     this.router.navigateByUrl('/tabs/films/${filmId}');
     console.log("filmId",filmId);
     console.log("split",split); 
+    this.films = this.http.get('https://swapi.dev/api/films');
+    this.films.subscribe(data =>{ console.log('my data: ', data)
+    this.crawl = data.results[filmId].opening_crawl;
+    console.log("record 2 crawl:",this.crawl);
+    console.log("record 2 crawl again",data.results[filmId].opening_crawl);
+  });
   }
+  loaddata(){
+    this.films = this.http.get('https://swapi.dev/api/films');
+    this.films.subscribe(data =>{ console.log('my data: ', data)
+    this.crawl = data.results[0].opening_crawl;
+    console.log("loaddata crawl:",this.crawl);
+    console.log("loaddata crawl again",data.results[0].opening_crawl);
+  });
+}
   
 }

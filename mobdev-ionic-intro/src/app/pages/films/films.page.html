@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Films</ion-title>
+    <ion-title>films.page.html</ion-title>
   </ion-toolbar>
   <ion-buttons slot="start" defaultHref="/tabs/(films:films)">
     <ion-back-button></ion-back-button>
@@ -9,9 +9,12 @@
 <div><br/>Crawl from films.page.html:<br/>{{crawl}}</div>
 
 <ion-content>
+  <ion-button (click)="loaddata()" routerLink="/film-details/film-details.page.html">Click for film.details</ion-button>
   <ion-list>
     <ion-item button detail lines="inset" *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">
       <br/><br/>{{film.title}}<br/><br/>{{film.opening_crawl}}
+      <br/><br/>Director: {{film.director}}
     </ion-item>
   </ion-list>
+  
 </ion-content>

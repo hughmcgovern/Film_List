@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start" defaultHref="/tabs/(films:films)">
-      <ion-back-button></ion-back-button>
+      <ion-back-button>Back Button</ion-back-button>
     </ion-buttons>
-    <ion-title>{{ film?.title }}</ion-title>
+    <ion-title>film-details.page: {{ film?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
-<div>Crawl from film_details.page.html:{{crawl}}</div>
+<div>Crawl from film_details.page.html:{{film.crawl}}</div>
 <ion-content padding="">
   <div>Crawl:{{crawl}}</div>
-  <ion-card *ngIf="film" class="movie-card">
+<!--  <ion-card *ngIf="film" class="movie-card">
     <ion-card-header>Episode {{ film.episode_id }}: {{ film.title}}</ion-card-header>
     <ion-card-content>
       {{ film.Id }}
@@ -33,6 +33,6 @@
     <br/><br/>{{film.title}}<br/><br/>{{film.opening_crawl}}
   </ion-item>
   <div>Film Id is: {{film.filmId}}</div>
-
+-->
 
 </ion-content>

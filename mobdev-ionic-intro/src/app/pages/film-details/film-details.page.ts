@@ -11,7 +11,7 @@ export class FilmDetailsPage implements OnInit {
 [x: string]: any;
 
   film:any;
-  crawl:any;
+  crawl: any;
   filmId:any;
 
   constructor(private activatedRoute:ActivatedRoute, private http:HttpClient) { 
@@ -26,6 +26,7 @@ export class FilmDetailsPage implements OnInit {
       console.log("res",this.film);
       console.log("id",id);
       //this.crawl = res.results[2].opening_crawl;
+      
     })
   }
 
