@@ -11,12 +11,21 @@ import {HttpClient} from '@angular/common/http';
 export class FilmsPage implements OnInit {
 
   films: Observable<any>;
+  crawl:any;
 
   constructor(private router: Router, private http:HttpClient) { }
 
   ngOnInit() {
     this.films = this.http.get('https://swapi.dev/api/films');
-    this.films.subscribe(data =>{ console.log('my data: ', data);});
+    this.films.subscribe(data =>{ console.log('my data: ', data)
+    this.crawl = data.results[2].opening_crawl;
+    console.log("*** not working crawl ***:",this.crawl);
+    console.log("****working crawl****",data.results[2].opening_crawl);
+    
+    
+    ;});
+        
+
 	}
 
   openDetails(film: { url: string; }){
