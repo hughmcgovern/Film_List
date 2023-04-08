@@ -8,11 +8,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./film-details.page.scss'],
 })
 export class FilmDetailsPage implements OnInit {
+[x: string]: any;
 
   film:any;
   crawl:any;
+  filmId:any;
 
-  constructor(private activatedRoute:ActivatedRoute, private http:HttpClient) { }
+  constructor(private activatedRoute:ActivatedRoute, private http:HttpClient) { 
+    this.filmId = this.activatedRoute.snapshot.paramMap.get('id');
+  }
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');

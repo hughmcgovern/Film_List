@@ -10,7 +10,7 @@
 <ion-content padding="">
   <div>Crawl:{{crawl}}</div>
   <ion-card *ngIf="film" class="movie-card">
-    <ion-card-header>Episode {{ film.episode_id }}: {{ film.title }}</ion-card-header>
+    <ion-card-header>Episode {{ film.episode_id }}: {{ film.title}}</ion-card-header>
     <ion-card-content>
       {{ film.Id }}
     </ion-card-content>
@@ -29,4 +29,10 @@
     </ion-item>
   </ion-card>
  
+  <ion-item detail lines="inset" *ngIf="film">
+    <br/><br/>{{film.title}}<br/><br/>{{film.opening_crawl}}
+  </ion-item>
+  <div>Film Id is: {{film.filmId}}</div>
+
+
 </ion-content>
