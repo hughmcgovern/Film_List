@@ -6,9 +6,16 @@
     <ion-title>film-details.page: {{ film?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
-<div>Crawl from film_details.page.html:{{split2}}{{filmId4}}</div>
+<ion-button (click)="loadcrawl()">Click for crawl</ion-button>
+<br/><br/>
+<div>Click to change crawl!!!
+  <br/><br/>
+  {{crawlany}}
+</div>
+<br/><br/>
+<div>Crawl from film_details.page.html:<br/><br/>{{split2}}<br/><br/>FilmId{{filmId}}</div>
 <ion-content padding="">
-  <div>Crawl:{{crawl}}</div>
+  <div>Crawl here please:{{crawl}}</div>
 <!--  <ion-card *ngIf="film" class="movie-card">
     <ion-card-header>Episode {{ film.episode_id }}: {{ film.title}}</ion-card-header>
     <ion-card-content>
