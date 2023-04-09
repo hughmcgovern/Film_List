@@ -21,6 +21,7 @@ export class FilmDetailsPage implements OnInit {
   counter:any;
   id:any;
   crawlany:any;
+  title:any;
 
   constructor(private activatedRoute:ActivatedRoute, private http:HttpClient) { 
     this.filmId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -46,7 +47,9 @@ export class FilmDetailsPage implements OnInit {
     this.filmsdata.subscribe(data2 =>{ console.log('my data: ', data2)
     this.counter = this.counter +1;
     if (this.counter >=5){this.counter=0}
-    this.crawlany = data2.results[this.counter].opening_crawl;});
+    this.title = data2.results[this.counter].title; 
+    this.crawlany = data2.results[this.counter].opening_crawl;  
+  });
   }
 
   
