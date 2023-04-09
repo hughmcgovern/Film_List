@@ -38,6 +38,7 @@ export class FilmDetailsPage implements OnInit {
     console.log("*** director 1234 ***:",this.crawl);
     console.log("****director 3456****",data2.results[0].director);
     console.log("filmID4",this.filmId);});
+    this.counter=0;
   }
   loadcrawl(){
     this.filmsdata = this.http.get('https://swapi.dev/api/films');
@@ -47,6 +48,7 @@ export class FilmDetailsPage implements OnInit {
     this.title = data2.results[this.counter].title; 
     this.crawlany = data2.results[this.counter].opening_crawl;  
     this.director = data2.results[this.counter].director;  
+    this.id = data2.results[this.counter].episode_id; 
   });
   }
 
