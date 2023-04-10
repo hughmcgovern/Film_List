@@ -35,7 +35,7 @@ export class FilmsPage implements OnInit {
     let filmId = split[split.length-2];
     this.router.navigateByUrl('/tabs/films/${filmId}');
     console.log("OpenDetails");
-    console.log("filmId",filmId);
+    console.log("filmIdmega",filmId);
     console.log("split",split); 
     this.films = this.http.get('https://swapi.dev/api/films');
     this.films.subscribe(data =>{ console.log('my data: ', data)

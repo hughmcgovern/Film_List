@@ -3,11 +3,12 @@
     <ion-buttons slot="start" defaultHref="/tabs/(films:films)">
       <ion-back-button>Back Button</ion-back-button>
     </ion-buttons>
-    <ion-title>film-details.page: {{ film?.title }}</ion-title>
+    <ion-title>film-details.page: {{title}}{{ film?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-button (click)="loadcrawl()">Click for crawl</ion-button>
+<ion-button (click)="loadcrawl()">Click for Next Record</ion-button>
 <div style="color:green;">
+  Record # :{{counter}}
   Episode Id:{{id}}
   <br/><br/>
   {{title}}

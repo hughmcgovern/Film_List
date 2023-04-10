@@ -44,7 +44,7 @@ export class FilmDetailsPage implements OnInit {
     this.filmsdata = this.http.get('https://swapi.dev/api/films');
     this.filmsdata.subscribe(data2 =>{ console.log('my data: ', data2)
     this.counter = this.counter +1;
-    if (this.counter >=5){this.counter=0}
+    if (this.counter >=6){this.counter=0}
     this.title = data2.results[this.counter].title; 
     this.crawlany = data2.results[this.counter].opening_crawl;  
     this.director = data2.results[this.counter].director;  
